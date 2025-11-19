@@ -43,4 +43,25 @@ fetchData(true)
   })
   .finally(() => {
     console.log("Fetch attempt completed (finally example)."); // This always runs, regardless of success or failure
+
   });
+var ans = new Promise((res,rej)=>{
+var n = Math.floor(Math.random()*10);
+ if(n<5){
+   return res();
+ }
+ else{
+  return rej();
+ }
+})
+
+ans
+.then(function () {
+  console.log("above");
+  
+})
+.catch(function() {
+  console.log("small");
+  
+  
+})
